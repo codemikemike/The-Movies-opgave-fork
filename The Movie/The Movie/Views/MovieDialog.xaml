@@ -1,0 +1,102 @@
+﻿<Window x:Class="The_Movie.Views.MovieDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Movie.Views"
+        mc:Ignorable="d"
+        Title="Registrer Ny Film" Height="350" Width="450"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" 
+                   Text="Indtast film oplysninger:"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"/>
+
+        <!-- Form Fields -->
+        <StackPanel Grid.Row="1">
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Titel:" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" 
+                         Name="TitleTextBox"
+                         Padding="5"
+                         ToolTip="Indtast film titel"/>
+            </Grid>
+
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Varighed:" VerticalAlignment="Center"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <TextBox Name="DurationTextBox"
+                             Width="100"
+                             Padding="5"
+                             ToolTip="Indtast varighed i minutter"/>
+                    <Label Content="minutter" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Grid>
+
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Genre:" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1" 
+                         Name="GenreComboBox"
+                         Padding="5"
+                         ToolTip="Vælg film genre"/>
+            </Grid>
+
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="ID:" VerticalAlignment="Center"/>
+                <TextBlock Grid.Column="1" 
+                          Name="IdTextBlock"
+                          Text="Tildeles automatisk"
+                          VerticalAlignment="Center"
+                          FontStyle="Italic"
+                          Foreground="Gray"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" 
+                   Orientation="Horizontal" 
+                   HorizontalAlignment="Right" 
+                   Margin="0,20,0,0">
+            <Button Content="Gem" 
+                   Name="SaveButton"
+                   IsDefault="True"
+                   Click="SaveButton_Click"
+                   Background="LightGreen"
+                   Margin="0,0,10,0"
+                   Padding="20,8"
+                   FontWeight="Bold"/>
+            <Button Content="Annuller" 
+                   Name="CancelButton"
+                   IsCancel="True"
+                   Click="CancelButton_Click"
+                   Background="LightCoral"
+                   Padding="20,8"/>
+        </StackPanel>
+    </Grid>
+</Window>

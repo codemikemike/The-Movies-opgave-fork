@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace The_Movie.Model
+namespace The_Movie.Commands
 {
-    internal class Movie
+    internal interface ICommand
     {
     }
 }
