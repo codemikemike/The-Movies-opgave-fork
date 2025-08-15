@@ -1,4 +1,5 @@
 ﻿# 🎬 THE MOVIES – Gruppe 5 Projekt
+
 **Datamatikeruddannelsen – UCL Odense Online – 2. semester – 1. år**
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/The-Movies/The-Movies-opgave)
@@ -111,4 +112,3 @@ Se filen [LICENSE](LICENSE) for flere detaljer.
 ---
 
 💡 *Udviklet af Gruppe 5 – UCL Odense Online som en del af Datamatikeruddannelsen.*
-```bash
